@@ -1,0 +1,40 @@
+baseURL: "https://www.olivontech.com/"
+title: "Oliv’ on Tech"
+
+# lang configuration
+defaultContentLanguage: fr
+defaultContentLanguageInSubdir: true
+languages:
+  fr:
+    disabled: false
+    languageCode: fr-FR
+    languageDirection: ltr
+    languageName: Français
+    title: "Oliv’ on Tech"
+    weight: 1
+  en:
+    disabled: true
+    languageCode: en-US
+    languageDirection: ltr
+    languageName: American English
+    title: "Oliv’ on Tech"
+    weight: 2
+
+outputs:
+  home: ["HTML", "RSS", "JSON"]
+
+# theme
+theme: "papermod"
+ShowPostNavLinks: true
+ShowCodeCopyButtons: true
+params:
+  ShowShareButtons: true
+  ShareButtons:
+    ["twitter", "linkedin", "facebook", "telegram", "ycombinator", "reddit"]
+  ShowReadingTime: true
+  ShowBreadCrumbs: true
+
+  editPost:
+    URL: "https://github.com/<path_to_repo>/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
