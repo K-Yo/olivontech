@@ -1,6 +1,10 @@
 baseURL: "https://www.olivontech.com/"
 title: "Oliv’ on Tech"
 
+taxonomies:
+  category: categories
+  tag: tags
+
 # lang configuration
 defaultContentLanguage: fr
 defaultContentLanguageInSubdir: true
@@ -12,13 +16,50 @@ languages:
     languageName: Français
     title: "Oliv’ on Tech"
     weight: 1
+
+    menu:
+      main:
+        - identifier: posts
+          name: Articles
+          url: /posts/
+          weight: 10
+        - identifier: categories
+          name: Catégories
+          url: /categories/
+          weight: 20
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 30
+        - identifier: search
+          name: Recherche
+          url: /search/
+          weight: 40
   en:
-    disabled: true
+    disabled: false
     languageCode: en-US
     languageDirection: ltr
     languageName: American English
     title: "Oliv’ on Tech"
     weight: 2
+    menu:
+      main:
+        - identifier: posts
+          name: Posts
+          url: /posts/
+          weight: 10
+        - identifier: categories
+          name: Categories
+          url: /categories/
+          weight: 20
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 30
+        - identifier: search
+          name: Search
+          url: /search/
+          weight: 40
 
 outputs:
   home: ["HTML", "RSS", "JSON"]
@@ -34,7 +75,11 @@ params:
   ShowReadingTime: true
   ShowBreadCrumbs: true
 
+  DateFormat: "2006-02-01"
+
   editPost:
-    URL: "https://github.com/<path_to_repo>/content"
+    URL: "https://github.com/K-Yo/olivontech/blob/main/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
+
+sectionPagesMenu: main
