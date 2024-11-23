@@ -10,7 +10,7 @@ tags:
 description: 'Learn how to develop content for XSOAR from your IDE.'
 ---
 
-XSOAR has a built-in IDE that allows you to develop Scripts − an essential component for customizing the orchestrator.
+XSOAR has a built-in IDE that allows you to develop Scripts - an essential component for customizing the orchestrator.
 However, it has a number of limitations.
 In this article, you will learn how to use your favorite IDE to develop Scripts.
 
@@ -71,11 +71,11 @@ The built-in IDE ([Ace](https://ace.c9.io/)) has some basic features like syntax
 
 However, some crucial aspects of software development are not possible.
 
-If you are a proponent of "Testing is doubting," good luck! For a SOAR, execution serves to carry out security processes for the company's information systems. When you want to delete an email, disconnect a machine from the network, or escalate an alert from the SOC, reliability matters! With the built-in IDE, it is impossible to test your code other than executing it manually. With each change, you must manually validate that it works correctly in the expected cases, potentially on large volumes of data that are difficult to inspect visually. Welcome to the stone age of software development.
+Testing is crucial when working with security orchestrators, as they execute critical processes across the organization's information systems. Whether you're deleting emails, disconnecting machines from the network, or escalating SOC alerts, code reliability is paramount. However, the built-in IDE makes systematic testing nearly impossible. With each change, you must manually validate that it works correctly in the expected cases, potentially on large volumes of data that are difficult to inspect visually. Welcome to the stone age of software development.
 
 In the stone age, there is another thing you cannot do: dynamically debug your code. The Python debugger allows you to execute code line by line, set breakpoints, and observe variables and the system state at every moment. Forget all this in XSOAR; it is not possible natively.
 
-In a modern editor, Python code is analyzed (for example, with [pylance](https://learn.microsoft.com/fr-fr/shows/vs-code-livestreams/pylance-new-and-improved-python-experience) on vscode), and you get feedback with syntax highlighting and "problems" raised by the code analyzer. This allows the developer to identify defects in their code before executing it, such as:
+In a modern editor, Python code is analyzed (for example, with [pylance](https://learn.microsoft.com/fr-fr/shows/vs-code-livestreams/pylance-new-and-improved-python-experience) on VSCode), and you get feedback with syntax highlighting and "problems" raised by the code analyzer. This allows the developer to identify defects in their code before executing it, such as:
 
 - Unimported objects
 - Typos
@@ -88,11 +88,11 @@ An IDE is also a personalized development space for a developer, with automatic 
 
 ## An Easy Solution to Implement: Local Development
 
-The XSOAR IDE limits our ability to quickly create reliable code. It is possible at a low cost to benefit from the features and comfort of your IDE. I will detail here how to do it with [vscode](https://code.visualstudio.com/), the process is probably similar for other IDEs like [PyCharm](https://www.jetbrains.com/pycharm/) or [Zed](https://zed.dev/).
+The XSOAR IDE limits our ability to quickly create reliable code. It is possible at a low cost to benefit from the features and comfort of your IDE. Here's how to do it with [VSCode](https://code.visualstudio.com/), the process is probably similar for other IDEs like [PyCharm](https://www.jetbrains.com/pycharm/) or [Zed](https://zed.dev/).
 
 ### Retrieving Files
 
-The first step is to have the code you are working on! You just need to naively copy/paste the code of your Script into a file in vscode.
+The first step is to have the code you are working on! You just need to naively copy/paste the code of your Script into a file in VSCode.
 
 We are then missing several elements that are automatically imported into XSOAR. We need to specify them in our case.
 
@@ -123,7 +123,7 @@ The first line allows access to the simulated `demisto` object, and the second i
 
 If necessary, you can add `from CommonServerUserPython import *` as a third import if you have code in that file as well.
 
-You also need Pylance in vscode if it is not already installed.
+You also need Pylance in VSCode if it is not already installed.
 
 You should then have the files as shown below, and now have a development environment where you can enjoy syntax highlighting, linting (notably the very powerful type checking), and dynamic debugging.
 
