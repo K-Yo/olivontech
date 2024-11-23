@@ -1,9 +1,20 @@
-+++
-date = '2024-11-11T18:39:08+01:00'
-draft = true
-title = 'Développement local pour XSOAR'
-slug = 'développement-local-pour-xsoar'
-+++
+---
+date: '2024-11-11T18:39:08+01:00'
+draft: false
+title: 'Développement local pour XSOAR'
+slug: 'local-development-on-xsoar'
+categories:
+  - Tuto
+tags:
+  - XSOAR
+description: 'Apprenez comment développer du contenu pour XSOAR depuis votre IDE.'
+---
+
+XSOAR possède un IDE intégré permettant de développer des Scripts − composant essentiel à la personnalisation de l’orchestrateur.
+Cependant celui-ci comporte un certain nombre de limites.
+Vous apprendrez dans cet article comment utiliser votre IDE favori pour développer les Scripts.
+
+<!--more-->
 
 ## Customiser XSOAR
 
@@ -16,11 +27,9 @@ Ils sont principalement écrits en Python (ou Javascript, mais le monde de la s�
 
 ## Fonctionnement des scripts
 
-<!-- intégrer une image de page d’édition d’un script ? -->
-
 Les Scripts permettent d’exécuter du code que vous maîtrisez dans XSOAR.
 Il y en a un certain nombre livrés avec la solution (`Set`, etc.) ou qu’on peut installer à travers un pack (par exemple [Common Scripts](https://cortex.marketplace.pan.dev/marketplace/details/CommonScripts/)).
-Vous pouvez également en créer vous-même quand les scripts sur étagère ne conviennent pas. Comparer des objets complexes? manipuler des données exotiques? transformer de la donnée custom <!-- traduction? -->? Exécuter un algorithme original? Exploiter des fonctions de librairies existantes? Faites un script!
+Vous pouvez également en créer vous-même quand les scripts sur étagère ne conviennent pas. Comparer des objets complexes? manipuler des données exotiques? transformer de la donnée sur mesure? Exécuter un algorithme original? Exploiter des fonctions de librairies existantes? Faites un script!
 
 Par exemple, XSOAR propose un système de _templating_ rudimentaire. Pour bénéficier de la puissance de [Jinja](https://jinja.palletsprojects.com/), on peut facilement créer un Script qui va prendre les données et le template passé en argument et sortir le rendu pour être utilisé plus loin dans le playbook.
 
@@ -61,11 +70,10 @@ Une fois le script créé, il est accessible dans la bibliothèque de l’instan
 
 ## Les limites de l’IDE intégré
 
-L’IDE intégré (<!-- intégrer la lib utilisée pour fournir l’IDE -->) <!-- comparatif du ressenti avec vscode ou autres dans le style -->
+L’IDE intégré ([Ace](https://ace.c9.io/)) a quelques fonctionnalités basiques de coloration syntaxique ou recherche.
 
 Cependant, certains aspects cruciaux du développement logiciel ne sont pas possibles.
 
-<!-- Les tests -->
 Si vous êtes adepte du « Tester c’est douter », bonne chance!
 Pour un SOAR, l’exécution sert à porter des processus de sécurité des systèmes d’information de l’entreprise.
 Quand vous voulez supprimer un e-mail, déconnecter du réseau une machine ou remonter une alerte du SOC, la fiabilité a son importance!
@@ -76,7 +84,7 @@ Bienvenue à l’âge de pierre du développement informatique.
 À l’age de pierre il y a autre chose qu’on ne peut pas faire: débogguer son code dynamiquement. Le déboggueur python permet d’exécuter le code ligne par ligne, mettre des points d’arrêt, observer les variables et l’état du système à chaque instant. Oubliez tout-ceci dans XSOAR, ça n’est pas possible nativement.
 
 Sur un éditeur moderne, le code python est analysé (par exemple avec [pylance](https://learn.microsoft.com/fr-fr/shows/vs-code-livestreams/pylance-new-and-improved-python-experience) sur vscode), et vous avez un retour avec la coloration syntaxique et les « problèmes » remontés par l’analyseur de code.
-Cela permet au développeur <!-- trouver terme neutre en genre? + autres occurrences --> d’identifier des défauts dans son code avant de l’exécuter, comme par exemple:
+Cela permet à la personne développeuse d’identifier des défauts dans son code avant de l’exécuter, comme par exemple:
 
 - des objets non importés
 - des fautes de frappes
@@ -85,7 +93,7 @@ Cela permet au développeur <!-- trouver terme neutre en genre? + autres occurre
 
 L’IDE intégré contient une coloration syntaxique basique, qui laisse passer la plupart de ces erreurs.
 
-Un IDE, c’est aussi pour un développeur un espace de développement personnalisé, avec une solution de formattage automatique, des raccourcis clavier, une coloration habituelle, etc.
+Un IDE, c’est aussi pour une personne développeuse un espace de développement personnalisé, avec une solution de formattage automatique, des raccourcis clavier, une coloration habituelle, etc.
 Plein d’élélments lui permettant d’être plus efficace grâce aux habitudes et automatismes.
 
 ## Une solution facile à mettre en place: le développement en local
