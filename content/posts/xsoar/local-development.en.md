@@ -1,7 +1,7 @@
 ---
 date: '2024-11-11T18:39:08+01:00'
 draft: false
-title: 'Local development on XSOAR'
+title: 'Local development for XSOAR'
 slug: 'local-development-on-xsoar'
 categories:
   - HowTo
