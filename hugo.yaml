@@ -5,6 +5,8 @@ taxonomies:
   category: categories
   tag: tags
 
+enableRobotsTXT: true
+
 # lang configuration
 defaultContentLanguage: fr
 defaultContentLanguageInSubdir: true
