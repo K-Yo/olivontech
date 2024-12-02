@@ -1,6 +1,6 @@
 ---
 date: '2024-12-01T10:24:59+01:00'
-draft: true
+draft: false
 title: 'Téléchargez Splunk sans vous connecter'
 slug: 'download-splunk-without-login'
 categories:
