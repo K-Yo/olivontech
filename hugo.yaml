@@ -77,7 +77,7 @@ params:
   ShowReadingTime: true
   ShowBreadCrumbs: true
 
-  DateFormat: "2006-02-01"
+  DateFormat: "2006-01-02"
 
   editPost:
     URL: "https://github.com/K-Yo/olivontech/blob/main/content"
